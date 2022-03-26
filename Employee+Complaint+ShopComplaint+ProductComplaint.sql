@@ -1,4 +1,15 @@
 --
+-- Table structure for table `Employee`
+--
+
+CREATE TABLE `Employee` (
+  `EmployeeID` varchar(30) NOT NULL,
+  `Name` varchar(30) NOT NULL,
+  `MonthlySalary` int DEFAULT NULL,
+  PRIMARY KEY (`EmployeeID`)
+);
+
+--
 -- Table structure for table `Complaint`
 --
 
@@ -15,17 +26,6 @@ CREATE TABLE `Complaint` (
   KEY `UserID` (`UserID`),
   CONSTRAINT `complaint_ibfk_1` FOREIGN KEY (`EmployeeID`) REFERENCES `Employee` (`EmployeeID`),
   CONSTRAINT `complaint_ibfk_2` FOREIGN KEY (`UserID`) REFERENCES `UserTable` (`UserID`)
-);
-
---
--- Table structure for table `Employee`
---
-
-CREATE TABLE `Employee` (
-  `EmployeeID` varchar(30) NOT NULL,
-  `Name` varchar(30) NOT NULL,
-  `MonthlySalary` int DEFAULT NULL,
-  PRIMARY KEY (`EmployeeID`)
 );
 
 --
