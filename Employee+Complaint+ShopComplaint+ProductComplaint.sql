@@ -76,3 +76,36 @@ VALUES ('0001',
         2022-02-13,
         2022-02-17) 
         
+INSERT INTO Complaint
+VALUES ('0002', 
+		(SELECT EmployeeID 
+        FROM Employee),
+        (SELECT UserID
+        FROM User),
+        pending,
+        2022-02-23,
+        2022-02-23,
+        2022-02-25)        
+	
+INSERT INTO Complaint
+VALUES ('0003', 
+		(SELECT EmployeeID 
+        FROM Employee),
+        (SELECT UserID
+        FROM User),
+        pending,
+        2022-01-09,
+        2022-01-12,
+        2022-01-21)
+        
+INSERT INTO Complaint
+VALUES ('0004', 
+		(SELECT EmployeeID 
+        FROM Employee),
+        (SELECT UserID
+        FROM User),
+        pending,
+        2022-03-01,
+        2022-03-07,
+        2022-03-19)
+        
