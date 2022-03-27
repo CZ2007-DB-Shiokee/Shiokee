@@ -54,7 +54,8 @@ CREATE TABLE `ShopComplaint` (
   CONSTRAINT `shopcomplaint_ibfk_2` FOREIGN KEY (`ComplaintID`) REFERENCES `Complaint` (`ComplaintID`)
 );
 
--- Inserting Data In Employee 
+-- Inserting data In Employee 
+
 INSERT INTO Employee
 VALUES ('0001', Megan, 3000);
 INSERT INTO Employee
@@ -64,7 +65,9 @@ VALUES ('0003', LiYing, 3000);
 INSERT INTO Employee
 VALUES ('0004', Clarrisa, 3000);
 
--- Inserting Data in Complaint
+-- Inserting data in Complaint
+-- Should have 8 -> 4 for ProductComplain, 4 for ShopComplaint
+
 INSERT INTO Complaint
 VALUES ('0001', 
 		(SELECT EmployeeID 
@@ -108,4 +111,87 @@ VALUES ('0004',
         2022-03-01,
         2022-03-07,
         2022-03-19);
+        
+INSERT INTO Complaint
+VALUES ('0005', 
+		(SELECT EmployeeID 
+        FROM Employee),
+        (SELECT UserID
+        FROM User),
+        pending,
+        2022-03-02,
+        2022-03-04,
+        2022-03-12);
+        
+INSERT INTO Complaint
+VALUES ('0006', 
+		(SELECT EmployeeID 
+        FROM Employee),
+        (SELECT UserID
+        FROM User),
+        pending,
+        2022-03-09,
+        2022-03-17,
+        2022-03-19);
+        
+INSERT INTO Complaint
+VALUES ('0007', 
+		(SELECT EmployeeID 
+        FROM Employee),
+        (SELECT UserID
+        FROM User),
+        pending,
+        2022-03-12,
+        2022-03-13,
+        2022-03-17);
+        
+INSERT INTO Complaint
+VALUES ('0008', 
+		(SELECT EmployeeID 
+        FROM Employee),
+        (SELECT UserID
+        FROM User),
+        pending,
+        2022-03-20,
+        2022-03-23,
+        2022-03-28);
+
+-- Inserting data into ProductComplaint
+
+INSERT INTO ProductComplaint   
+VALUES ((SELECT ComplaintID 
+		FROM Complaint), 'ABC001');
+
+INSERT INTO ProductComplaint   
+VALUES ((SELECT ComplaintID 
+		FROM Complaint), 'DEF002');
+
+INSERT INTO ProductComplaint   
+VALUES ((SELECT ComplaintID 
+		FROM Complaint), 'GHI003'); 
+
+INSERT INTO ProductComplaint   
+VALUES ((SELECT ComplaintID 
+		FROM Complaint), 'JKL004');
+
+
+-- Inserting data into ShopComplaint
+
+INSERT INTO ShopComplaint
+VALUES ((SELECT ComplaintID 
+		FROM Complaint), 'Shopee');
+        
+INSERT INTO ShopComplaint
+VALUES ((SELECT ComplaintID 
+		FROM Complaint), 'Uniqlo');
+        
+INSERT INTO ShopComplaint
+VALUES ((SELECT ComplaintID 
+		FROM Complaint), 'Samsung');
+        
+INSERT INTO ShopComplaint
+VALUES ((SELECT ComplaintID 
+		FROM Complaint), 'Shopee');
+        
+        
         
