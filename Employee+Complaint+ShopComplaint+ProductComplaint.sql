@@ -53,3 +53,26 @@ CREATE TABLE `ShopComplaint` (
   CONSTRAINT `shopcomplaint_ibfk_1` FOREIGN KEY (`ShopName`) REFERENCES `Shop` (`ShopName`),
   CONSTRAINT `shopcomplaint_ibfk_2` FOREIGN KEY (`ComplaintID`) REFERENCES `Complaint` (`ComplaintID`)
 );
+
+-- Inserting Data In Employee 
+INSERT INTO Employee
+VALUES ('0001', Megan, 3000);
+INSERT INTO Employee
+VALUES ('0002', Jeremy, 3000);
+INSERT INTO Employee
+VALUES ('0003', LiYing, 3000);
+INSERT INTO Employee
+VALUES ('0004', Clarrisa, 3000);
+
+-- Inserting Data in Complaint
+INSERT INTO Complaint
+VALUES ('0001', 
+		(SELECT EmployeeID 
+        FROM Employee),
+        (SELECT UserID
+        FROM User),
+        pending,
+        2022-02-12,
+        2022-02-13,
+        2022-02-17) 
+        
