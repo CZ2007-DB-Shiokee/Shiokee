@@ -23,6 +23,19 @@ VALUES ('0003', 'LiYing', 5000);
 INSERT INTO Employee
 VALUES ('0004', 'Clarrisa', 3500); 
 
+-- Inserting data In Employee 
+
+INSERT INTO UserTable
+VALUES ('0001', 'Angela123');
+INSERT INTO UserTable
+VALUES ('0002', '91Alpha');
+INSERT INTO UserTable
+VALUES ('0003', 'Blue_Sky');
+INSERT INTO UserTable
+VALUES ('0004', 'DanceMonkey');
+INSERT INTO UserTable
+VALUES ('0005', '7-Senses');
+
 -- Inserting data in Complaint
 -- Should have 8 -> 4 for ProductComplain, 4 for ShopComplaint
 
@@ -55,28 +68,28 @@ VALUES ('0004', '0001',
         '2021-07-19');
         
 INSERT INTO Complaint
-VALUES ('0003', '0001',
+VALUES ('0005', '0001',
         '0002','addressed',
         '2021-08-02',
         '2021-08-04',
         '2021-08-12');
         
 INSERT INTO Complaint
-VALUES ('0004', '0002',
+VALUES ('0006', '0002',
         '0004','addressed',
         '2021-08-09',
         '2021-08-17',
         '2021-08-19');
         
 INSERT INTO Complaint
-VALUES ('0002', '0004',
+VALUES ('0007', '0004',
         '0001','being handled',
         '2021-10-12',
         '2021-10-13',
         NULL);
         
 INSERT INTO Complaint
-VALUES ('0003', '0001',
+VALUES ('0008', '0001',
         '0003','being handled',
         '2021-11-20',
         '2021-11-23',
