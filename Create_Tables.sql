@@ -124,16 +124,17 @@ CREATE TABLE ShopComplaint (
 --
 
 CREATE TABLE OrderItem(
-    IDinShoikee VARCHAR(30) PRIMARY KEY,
-    Status VARCHAR(10),
+    IDinShoikee VARCHAR(30),
+    Status enum('being processed','shipped','delivered') DEFAULT 'being processed',
     SellPrice FLOAT,
     Quantity INT,
     ShippedTimeStamp DATETIME,
     Delivered Timestamp, 
     OrderID VARCHAR(30),
     IDinOrder INT, 
+    PRIMARY KEY (OrderID, IDinOrder),
     FOREIGN KEY (OrderID) REFERENCES OrderTable(OrderID),
-    UNIQUE(OrderID, IDinOrder)
+    FOREIGN KEY (IDinShoikee) REFERENCES ProductInShop(IDinShoikee)
 );
 
 --
