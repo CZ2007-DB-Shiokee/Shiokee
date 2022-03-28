@@ -69,64 +69,56 @@ VALUES ('0004', Clarrisa, 3000);
 -- Should have 8 -> 4 for ProductComplain, 4 for ShopComplaint
 
 INSERT INTO Complaint
-VALUES ('0001', 
-		'0003',
+VALUES ('0001', '0003',
         pending,
         2022-02-12,
         2022-02-13,
         2022-02-17); 
         
 INSERT INTO Complaint
-VALUES ('0002', 
-		'0002',
+VALUES ('0002', '0002',
         pending,
         2022-02-23,
         2022-02-23,
         2022-02-25);       
 	
 INSERT INTO Complaint
-VALUES ('0003', 
-		'0001',
+VALUES ('0003', '0001',
         pending,
         2022-01-09,
         2022-01-12,
         2022-01-21);
         
 INSERT INTO Complaint
-VALUES ('0004', 
-		'0001',
+VALUES ('0004', '0001',
         pending,
         2022-03-01,
         2022-03-07,
         2022-03-19);
         
 INSERT INTO Complaint
-VALUES ('0005', 
-		'0001',
+VALUES ('0005', '0001',
         pending,
         2022-03-02,
         2022-03-04,
         2022-03-12);
         
 INSERT INTO Complaint
-VALUES ('0006', 
-		'0002',
+VALUES ('0006', '0002',
         pending,
         2022-03-09,
         2022-03-17,
         2022-03-19);
         
 INSERT INTO Complaint
-VALUES ('0007', 
-		'0004',
+VALUES ('0007', '0004',
         pending,
         2022-03-12,
         2022-03-13,
         2022-03-17);
         
 INSERT INTO Complaint
-VALUES ('0008', 
-		'0001',
+VALUES ('0008', '0001',
         pending,
         2022-03-20,
         2022-03-23,
