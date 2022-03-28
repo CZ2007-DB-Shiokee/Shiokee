@@ -258,4 +258,4 @@ VALUES ('0002', 'Apple'),
 ('0011', 'Giant'),
 ('0013', 'Sephora'),
 ('0014', 'Ikea'),
-('0015', 'Chllenger');
+('0016', 'Chllenger');
