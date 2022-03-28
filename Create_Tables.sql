@@ -129,7 +129,7 @@ CREATE TABLE OrderItem(
     SellPrice FLOAT,
     Quantity INT,
     ShippedTimeStamp DATETIME,
-    Delivered Timestamp, 
+    Delivered DATETIME, 
     OrderID VARCHAR(30),
     IDinOrder INT, 
     PRIMARY KEY (OrderID, IDinOrder),
