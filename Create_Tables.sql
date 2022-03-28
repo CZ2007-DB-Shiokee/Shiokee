@@ -84,15 +84,15 @@ CREATE TABLE ProductInShop(
 
 CREATE TABLE Complaint (
   ComplaintID varchar(30) NOT NULL,
-  EmployeeID varchar(30) DEFAULT NULL,
+  EmployeeID varchar(30) NULL,
   UserID varchar(30) NOT NULL,
   Status enum('pending','being handled','addressed') DEFAULT 'pending',
   IssueTimestamp DATETIME NOT NULL,
-  HandleStartTimestamp DATETIME NULL DEFAULT NULL,
-  CloseTimestamp DATETIME NULL DEFAULT NULL,
+  HandleStartTimestamp DATETIME NULL,
+  CloseTimestamp DATETIME NULL,
   PRIMARY KEY (ComplaintID),
-  CONSTRAINT complaint_ibfk_1 FOREIGN KEY (EmployeeID) REFERENCES Employee (EmployeeID),
-  CONSTRAINT complaint_ibfk_2 FOREIGN KEY (UserID) REFERENCES UserTable (UserID)
+  CONSTRAINT complaint_ibfk_1 FOREIGN KEY (EmployeeID) REFERENCES Employee (EmployeeID) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT complaint_ibfk_2 FOREIGN KEY (UserID) REFERENCES UserTable (UserID) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 --
@@ -103,8 +103,8 @@ CREATE TABLE ProductComplaint (
   ComplaintID varchar(30) NOT NULL,
   IDInShoikee varchar(30) DEFAULT NULL,
   PRIMARY KEY (ComplaintID),
-  CONSTRAINT productcomplaint_ibfk_1 FOREIGN KEY (ComplaintID) REFERENCES Complaint (ComplaintID),
-  CONSTRAINT productcomplaint_ibfk_2 FOREIGN KEY (IDInShoikee) REFERENCES ProductInShop (IDInShoikee)
+  CONSTRAINT productcomplaint_ibfk_1 FOREIGN KEY (ComplaintID) REFERENCES Complaint (ComplaintID) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT productcomplaint_ibfk_2 FOREIGN KEY (IDInShoikee) REFERENCES ProductInShop (IDInShoikee) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 --
@@ -115,8 +115,8 @@ CREATE TABLE ShopComplaint (
   ComplaintID varchar(30) NOT NULL,
   ShopName varchar(30) DEFAULT NULL,
   PRIMARY KEY (ComplaintID),
-  CONSTRAINT shopcomplaint_ibfk_1 FOREIGN KEY (ShopName) REFERENCES Shop (ShopName),
-  CONSTRAINT shopcomplaint_ibfk_2 FOREIGN KEY (ComplaintID) REFERENCES Complaint (ComplaintID)
+  CONSTRAINT shopcomplaint_ibfk_1 FOREIGN KEY (ShopName) REFERENCES Shop (ShopName) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT shopcomplaint_ibfk_2 FOREIGN KEY (ComplaintID) REFERENCES Complaint (ComplaintID) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 --
