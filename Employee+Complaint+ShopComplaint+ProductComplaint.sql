@@ -57,72 +57,72 @@ CREATE TABLE `ShopComplaint` (
 -- Inserting data In Employee 
 
 INSERT INTO Employee
-VALUES ('0001', Megan, 3000);
+VALUES ('0001', 'Megan', 3000);
 INSERT INTO Employee
-VALUES ('0002', Jeremy, 3000);
+VALUES ('0002', 'Jeremy', 3000);
 INSERT INTO Employee
-VALUES ('0003', LiYing, 3000);
+VALUES ('0003', 'LiYing', 3000);
 INSERT INTO Employee
-VALUES ('0004', Clarrisa, 3000);
+VALUES ('0004', 'Clarrisa', 3000);
 
 -- Inserting data in Complaint
 -- Should have 8 -> 4 for ProductComplain, 4 for ShopComplaint
 
 INSERT INTO Complaint
-VALUES ('0001', '0003',
-        pending,
-        2022-02-12,
-        2022-02-13,
-        2022-02-17); 
+VALUES ('0001', NULL,
+        'pending',
+        '2022-02-12',
+        NULL,
+        NULL); 
         
 INSERT INTO Complaint
 VALUES ('0002', '0002',
-        pending,
-        2022-02-23,
-        2022-02-23,
-        2022-02-25);       
+        'addressed',
+        '2022-02-23',
+        '2022-02-23',
+        '2022-02-25');       
 	
 INSERT INTO Complaint
 VALUES ('0003', '0001',
-        pending,
-        2022-01-09,
-        2022-01-12,
-        2022-01-21);
+        'being handled',
+        '2022-01-09',
+        '2022-01-12',
+        NULL);
         
 INSERT INTO Complaint
 VALUES ('0004', '0001',
-        pending,
-        2022-03-01,
-        2022-03-07,
-        2022-03-19);
+        'addressed',
+        '2022-03-01',
+        '2022-03-07',
+        '2022-03-19');
         
 INSERT INTO Complaint
 VALUES ('0005', '0001',
-        pending,
-        2022-03-02,
-        2022-03-04,
-        2022-03-12);
+        'addressed',
+        '2022-03-02',
+        '2022-03-04',
+        '2022-03-12');
         
 INSERT INTO Complaint
 VALUES ('0006', '0002',
-        pending,
-        2022-03-09,
-        2022-03-17,
-        2022-03-19);
+        'addressed',
+        '2022-03-09',
+        '2022-03-17',
+        '2022-03-19');
         
 INSERT INTO Complaint
 VALUES ('0007', '0004',
-        pending,
-        2022-03-12,
-        2022-03-13,
-        2022-03-17);
+        'being handled',
+        '2022-03-12',
+        '2022-03-13',
+        NULL);
         
 INSERT INTO Complaint
 VALUES ('0008', '0001',
-        pending,
-        2022-03-20,
-        2022-03-23,
-        2022-03-28);
+        'being handled',
+        '2022-03-20',
+        '2022-03-23',
+        NULL);
 
 -- Inserting data into ProductComplaint
 
