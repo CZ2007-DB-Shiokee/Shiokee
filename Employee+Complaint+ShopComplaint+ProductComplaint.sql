@@ -59,11 +59,11 @@ CREATE TABLE `ShopComplaint` (
 INSERT INTO Employee
 VALUES ('0001', 'Megan', 3000);
 INSERT INTO Employee
-VALUES ('0002', 'Jeremy', 3000);
+VALUES ('0002', 'Jeremy', 4500);
 INSERT INTO Employee
-VALUES ('0003', 'LiYing', 3000);
+VALUES ('0003', 'LiYing', 5000);
 INSERT INTO Employee
-VALUES ('0004', 'Clarrisa', 3000);
+VALUES ('0004', 'Clarrisa', 3500); 
 
 -- Inserting data in Complaint
 -- Should have 8 -> 4 for ProductComplain, 4 for ShopComplaint
