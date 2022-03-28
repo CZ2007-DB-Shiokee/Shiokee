@@ -70,10 +70,7 @@ VALUES ('0004', Clarrisa, 3000);
 
 INSERT INTO Complaint
 VALUES ('0001', 
-		(SELECT EmployeeID 
-        FROM Employee),
-        (SELECT UserID
-        FROM User),
+		'0003',
         pending,
         2022-02-12,
         2022-02-13,
@@ -81,10 +78,7 @@ VALUES ('0001',
         
 INSERT INTO Complaint
 VALUES ('0002', 
-		(SELECT EmployeeID 
-        FROM Employee),
-        (SELECT UserID
-        FROM User),
+		'0002',
         pending,
         2022-02-23,
         2022-02-23,
@@ -92,10 +86,7 @@ VALUES ('0002',
 	
 INSERT INTO Complaint
 VALUES ('0003', 
-		(SELECT EmployeeID 
-        FROM Employee),
-        (SELECT UserID
-        FROM User),
+		'0001',
         pending,
         2022-01-09,
         2022-01-12,
@@ -103,10 +94,7 @@ VALUES ('0003',
         
 INSERT INTO Complaint
 VALUES ('0004', 
-		(SELECT EmployeeID 
-        FROM Employee),
-        (SELECT UserID
-        FROM User),
+		'0001',
         pending,
         2022-03-01,
         2022-03-07,
@@ -114,10 +102,7 @@ VALUES ('0004',
         
 INSERT INTO Complaint
 VALUES ('0005', 
-		(SELECT EmployeeID 
-        FROM Employee),
-        (SELECT UserID
-        FROM User),
+		'0001',
         pending,
         2022-03-02,
         2022-03-04,
@@ -125,10 +110,7 @@ VALUES ('0005',
         
 INSERT INTO Complaint
 VALUES ('0006', 
-		(SELECT EmployeeID 
-        FROM Employee),
-        (SELECT UserID
-        FROM User),
+		'0002',
         pending,
         2022-03-09,
         2022-03-17,
@@ -136,10 +118,7 @@ VALUES ('0006',
         
 INSERT INTO Complaint
 VALUES ('0007', 
-		(SELECT EmployeeID 
-        FROM Employee),
-        (SELECT UserID
-        FROM User),
+		'0004',
         pending,
         2022-03-12,
         2022-03-13,
@@ -147,10 +126,7 @@ VALUES ('0007',
         
 INSERT INTO Complaint
 VALUES ('0008', 
-		(SELECT EmployeeID 
-        FROM Employee),
-        (SELECT UserID
-        FROM User),
+		'0001',
         pending,
         2022-03-20,
         2022-03-23,
@@ -159,39 +135,31 @@ VALUES ('0008',
 -- Inserting data into ProductComplaint
 
 INSERT INTO ProductComplaint   
-VALUES ((SELECT ComplaintID 
-		FROM Complaint), 'ABC001');
+VALUES ('0001', 'ABC001');
 
 INSERT INTO ProductComplaint   
-VALUES ((SELECT ComplaintID 
-		FROM Complaint), 'DEF002');
+VALUES ('0003', 'DEF002');
 
 INSERT INTO ProductComplaint   
-VALUES ((SELECT ComplaintID 
-		FROM Complaint), 'GHI003'); 
+VALUES ('0004', 'GHI003'); 
 
 INSERT INTO ProductComplaint   
-VALUES ((SELECT ComplaintID 
-		FROM Complaint), 'JKL004');
+VALUES ('0007', 'JKL004');
 
 
 -- Inserting data into ShopComplaint
 
 INSERT INTO ShopComplaint
-VALUES ((SELECT ComplaintID 
-		FROM Complaint), 'Shopee');
+VALUES ('0002', 'Shopee');
         
 INSERT INTO ShopComplaint
-VALUES ((SELECT ComplaintID 
-		FROM Complaint), 'Uniqlo');
+VALUES ('0005', 'Uniqlo');
         
 INSERT INTO ShopComplaint
-VALUES ((SELECT ComplaintID 
-		FROM Complaint), 'Samsung');
+VALUES ('0006', 'Samsung');
         
 INSERT INTO ShopComplaint
-VALUES ((SELECT ComplaintID 
-		FROM Complaint), 'Shopee');
+VALUES ('0008', 'Giant');
         
         
         
