@@ -70,18 +70,30 @@ VALUES  ('Popular', 23),
 -- Inserting data In Employee 
 
 INSERT INTO Employee
-VALUES ('0001', 'Megan', 3000),
+VALUES ('0001', 'Megan', 7000),
 ('0002', 'Jeremy', 4500),
-('0003', 'LiYing', 5000),
+('0003', 'LiYing', 5080),
 ('0004', 'Beyonce', 3500),
-('0005', 'Estelle', 3000),
+('0005', 'Estelle', 3030),
 ('0006', 'Aamir', 2300),
 ('0007', 'Kinga', 1700),
 ('0008', 'Jimmy', 1500),
 ('0009', 'Padraig', 2700),
 ('0010', 'Amaya', 5500),
 ('0011', 'Peterson', 4550),
-('0012', 'Norman', 1500);
+('0012', 'Norman', 2500),
+('0013', 'Graema', 6500),
+('0014', 'Greyson', 3390),
+('0015', 'Tracey', 2570),
+('0016', 'Natalia', 2000),
+('0017', 'Montel', 5990),
+('0018', 'Kieron', 3210),
+('0019', 'Ciara', 1290),
+('0020', 'Mohammod', 1590),
+('0021', 'Glover', 2100),
+('0022', 'Harding', 2990),
+('0023', 'Montes', 5780),
+('0024', 'Danielle', 3490);
 
 -- Inserting data In Employee 
 
@@ -95,10 +107,18 @@ VALUES ('0001', 'Angela123'),
 ('0007', '7-Senses'),
 ('0008', 'Silver10Dragon'),
 ('0009', 'OliverPaterson1'),
-('0010', 'Dancer_Cassie');
+('0010', 'Dancer_Cassie'),
+('0011', 'Anna_Marie2009'),
+('0012', 'Blade9'),
+('0013', 'PoppyFlowers'),
+('0014', 'HaperGonzalez2121'),
+('0015', '662Finn'),
+('0015', 'Nicolleeeeeee'),
+('0017', 'Lorena_Rios_78'),
+('0018', 'IdaJonesRosalind'),
+('0019', '120Jazzzzmin');
 
 -- Inserting data in Complaint
--- Should have 8 -> 4 for ProductComplain, 4 for ShopComplaint
 
 INSERT INTO Complaint
 VALUES ('0001', NULL,
@@ -121,7 +141,7 @@ NULL),
 '2021-07-01',
 '2021-07-07',
 '2021-07-19'),
- ('0005', '0003',
+('0005', '0003',
 '0002','addressed',
 '2021-08-02',
 '2021-08-04',
@@ -180,7 +200,40 @@ NULL),
 '0002','addressed',
 '2021-06-26',
 '2021-07-01',
-'2021-07-09');
+'2021-07-09'),
+('0017', NULL,
+'0004','pending',
+'2021-03-03',
+NULL,
+NULL),
+('0018', '0023',
+'0003','being handled',
+'2021-09-21',
+'2021-09-22'),
+('0019', '0019',
+'0003','being handled',
+'2021-02-11',
+'2021-02-19'),
+('0020', '0011',
+'0003','being handled',
+'2021-06-21',
+'2021-06-22'),
+('0005', '0013',
+'0002','addressed',
+'2021-04-02',
+'2021-04-06',
+'2021-04-12'),
+('0005', '0015',
+'0002','addressed',
+'2021-07-02',
+'2021-07-04',
+'2021-07-12'),
+('0005', '0013',
+'0002','addressed',
+'2021-05-23',
+'2021-05-24',
+'2021-05-29');
+
 
 
 -- Inserting data into ProductComplaint
