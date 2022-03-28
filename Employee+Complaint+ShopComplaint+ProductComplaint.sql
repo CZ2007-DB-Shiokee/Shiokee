@@ -71,57 +71,57 @@ VALUES ('0004', 'Clarrisa', 3000);
 INSERT INTO Complaint
 VALUES ('0001', NULL,
         'pending',
-        '2022-02-12',
+        '2021-02-12',
         NULL,
         NULL); 
         
 INSERT INTO Complaint
 VALUES ('0002', '0002',
         'addressed',
-        '2022-02-23',
-        '2022-02-23',
-        '2022-02-25');       
+        '2021-03-23',
+        '2021-02-23',
+        '2021-03-25');       
 	
 INSERT INTO Complaint
 VALUES ('0003', '0001',
         'being handled',
-        '2022-01-09',
-        '2022-01-12',
+        '2021-05-09',
+        '2021-05-12',
         NULL);
         
 INSERT INTO Complaint
 VALUES ('0004', '0001',
         'addressed',
-        '2022-03-01',
-        '2022-03-07',
-        '2022-03-19');
+        '2021-07-01',
+        '2021-07-07',
+        '2021-07-19');
         
 INSERT INTO Complaint
 VALUES ('0005', '0001',
         'addressed',
-        '2022-03-02',
-        '2022-03-04',
-        '2022-03-12');
+        '2021-08-02',
+        '2021-08-04',
+        '2021-08-12');
         
 INSERT INTO Complaint
 VALUES ('0006', '0002',
         'addressed',
-        '2022-03-09',
-        '2022-03-17',
-        '2022-03-19');
+        '2021-08-09',
+        '2021-08-17',
+        '2021-08-19');
         
 INSERT INTO Complaint
 VALUES ('0007', '0004',
         'being handled',
-        '2022-03-12',
-        '2022-03-13',
+        '2021-10-12',
+        '2021-10-13',
         NULL);
         
 INSERT INTO Complaint
 VALUES ('0008', '0001',
         'being handled',
-        '2022-03-20',
-        '2022-03-23',
+        '2021-11-20',
+        '2021-11-23',
         NULL);
 
 -- Inserting data into ProductComplaint
