@@ -153,7 +153,7 @@ CREATE TABLE ProductComplaint (
 
 CREATE TABLE ShopComplaint (
   ComplaintID varchar(30) NOT NULL,
-  ShopName varchar(30) DEFAULT NULL,
+  ShopName varchar(100) DEFAULT NULL,
   PRIMARY KEY (ComplaintID),
   CONSTRAINT shopcomplaint_ibfk_1 FOREIGN KEY (ShopName) REFERENCES Shop (ShopName) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT shopcomplaint_ibfk_2 FOREIGN KEY (ComplaintID) REFERENCES Complaint (ComplaintID) ON DELETE CASCADE ON UPDATE CASCADE
