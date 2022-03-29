@@ -1,5 +1,3 @@
-USE SHOIKEE;
-
 --
 -- Table structure for table `Shop`
 --
@@ -15,11 +13,11 @@ CREATE TABLE Shop(
 --
 
 CREATE TABLE Product(
-	ProductName VARCHAR(30),
-    Maker VARCHAR(30),
-    PRIMARY KEY (ProductName, Maker),
-    Cost FLOAT,
-    Category VARCHAR(30)
+	ProductName VARCHAR(50),
+  Maker VARCHAR(30),
+  PRIMARY KEY (ProductName, Maker),
+  Cost FLOAT,
+  Category VARCHAR(30)
 );
 
 --
@@ -73,16 +71,16 @@ CREATE TABLE PriceHistory(
 );
 
 --
--- Table structure for table `Order`
+-- Table structure for table `Orders`
 --
 
-CREATE TABLE Order(
+CREATE TABLE Orders(
     OrderID VARCHAR(30) PRIMARY KEY,
     UserID VARCHAR(30),
     TotalShippingCost FLOAT,
     ShippingAddress VARCHAR(80),
     OrderPlaced DATETIME,
-    FOREIGN KEY (UserID) REFERENCES UserTable(UserID)
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
 );
 
 --
@@ -99,7 +97,7 @@ CREATE TABLE OrderItem(
     ShippedTimeStamp DATETIME,
     Delivered DATETIME,
     PRIMARY KEY (OrderID, IDinOrder),
-    FOREIGN KEY (OrderID) REFERENCES OrderTable(OrderID),
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
     FOREIGN KEY (IDinShoikee) REFERENCES ProductInShop(IDinShoikee)
 );
 
@@ -117,7 +115,7 @@ CREATE TABLE Review(
     Comment VARCHAR(500), 
     PlacedTime DATETIME,
     FOREIGN KEY (OrderID, IDinOrder) REFERENCES OrderItem(OrderID, IDinOrder),
-    FOREIGN KEY (UserID) REFERENCES UserTable(UserID)
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
 );
 
 --
@@ -134,7 +132,7 @@ CREATE TABLE Complaint (
   CloseTimestamp DATETIME NULL,
   PRIMARY KEY (ComplaintID),
   CONSTRAINT complaint_ibfk_1 FOREIGN KEY (EmployeeID) REFERENCES Employee (EmployeeID) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT complaint_ibfk_2 FOREIGN KEY (UserID) REFERENCES UserTable (UserID) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT complaint_ibfk_2 FOREIGN KEY (UserID) REFERENCES Users (UserID) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 --

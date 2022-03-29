@@ -1,4 +1,3 @@
-USE SHOIKEE;
 -- Inserting data into Shop
 
 INSERT INTO Shop
@@ -79,7 +78,7 @@ VALUES  ('White Eraser', 'Faber-Castell', 1.90, 'Stationery'),
         ('Galaxy S11', 'Samsung', 1533, 'Phone'),
         ('Galaxy S12', 'Samsung',1888, 'Phone'),
         ('12-Inch Curve Television', 'LG', 999.9,'Television'),
-        ('3.5mm Audio Jack', 'Audio Technical', 59'Accessories'),
+        ('3.5mm Audio Jack', 'Audio Technical', 59,'Accessories'),
         ('Tempered Glass Screen Protector', 'Spigen', 66.6, 'Accessories'),
         ('Iphone X Mobile Cover', 'Castify', 19.9, 'Accessories');
 
@@ -298,7 +297,7 @@ VALUES  ('ABC001', 1100, '2021-01-01'),
 
 -- Inserting data into Order
 
-INSERT INTO Order
+INSERT INTO Orders
 VALUES  ('7XMT90', '1001', '32 Nanyang Crescent, Singapore 637658', '2020-02-04 12:00:10'),
         ('LZR52T', '1010', 'Orchard Road,#03-48,Singapore 632759', '2020-01-23 23:39:20'),
         ('KA8YA1', '1100', 'Jurong West,#10-1234, Singapore 647292', '2019-01-18 16:27:56'),
