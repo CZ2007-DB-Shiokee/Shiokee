@@ -445,27 +445,27 @@ VALUES  ('ABC001','7XMT90', 1, 1100, 1, 'delivered', '2020-02-15  00:11:37', '20
 --
 
 INSERT INTO Review
-VALUES  ('A0M001', '1001', 4.4, '7XMT90', 1, 'Well-designed and sleek in design', '2020-02-19 11:00:32'),
-        ('T0BQ0B', '1281', 2.9, 'S6874S', 1, 'Delivery is slightly late', '2020-05-25 16:19:34'), 
-        ('9DWZJS', '1238', 4.4, 'JO19G6', 1, 'Great Product', '2020-08-25 02:54:53'), 
-        ('APTUGT', '1242', 5.0, 'GPY0C9', 1, 'Great Product!', '2020-06-15 17:11:34'), 
-        ('LXA9AW', '1276', 2.3, '7L4HE4', 1, 'Seller is rude', '2020-06-09 21:33:23'), 
-        ('742Z1I', '1276', 4.8, 'U4QN6E', 1, 'Great Product', '2020-06-09 21:33:23'), 
-        ('NLZNJI', '1218', 2.9, 'FD5I2J', 1, 'Seller is rude', '2020-07-18 12:01:56'), 
-        ('010XWN', '1265', 2.5, 'IC153D', 1, 'Seller is rude', '2020-08-07 19:11:12'), 
-        ('6J7D7W', '1276', 3.0, '7L4HE4', 1, 'Seller is rude', '2020-06-01 21:33:23'), 
-        ('HV34F8', '1265', 3.6, 'YQL6U0', 1, 'Delivery is on time', '2020-08-07 19:11:12'),
-        ('0YUGAP', '1231', 3.5, '0X05FP', 1, 'Seller is good', '2020-02-18 06:48:22'), 
-        ('47CMJ5', '1231', 4.7, '0X05FP', 1, 'Seller is friendly', '2020-02-18 06:48:22'), 
-        ('7JZ9LN', '1234', 2.1, 'NN2DCN', 1, 'Seller is rude', '2020-08-21 01:10:32'), 
-        ('OONGIE', '1274', 3.4, 'VNWCA6', 1, 'Seller is good', '2020-08-08 13:27:34'), 
+VALUES  ('A0M001', '1001', 4.4, '7XMT90', 1, 'Well-designed and sleek in design', '2021-08-19 11:00:32'),
+        ('T0BQ0B', '1281', 2.9, 'S6874S', 1, 'Delivery is slightly late', '2021-05-25 16:19:34'), 
+        ('9DWZJS', '1238', 4.4, 'JO19G6', 1, 'Great Product', '2021-08-25 02:54:53'), 
+        ('APTUGT', '1242', 5.0, 'GPY0C9', 1, 'Great Product!', '2021-06-15 17:11:34'), 
+        ('LXA9AW', '1276', 2.3, '7L4HE4', 1, 'Seller is rude', '2021-06-09 21:33:23'), 
+        ('742Z1I', '1276', 4.8, 'U4QN6E', 1, 'Great Product', '2021-08-09 21:33:23'), 
+        ('NLZNJI', '1218', 2.9, 'FD5I2J', 1, 'Seller is rude', '2021-07-18 12:01:56'), 
+        ('010XWN', '1265', 2.5, 'IC153D', 1, 'Seller is rude', '2021-08-07 19:11:12'), 
+        ('6J7D7W', '1276', 3.0, '7L4HE4', 1, 'Seller is rude', '2021-06-01 21:33:23'), 
+        ('HV34F8', '1265', 3.6, 'YQL6U0', 1, 'Delivery is on time', '2021-08-07 19:11:12'),
+        ('0YUGAP', '1231', 3.5, '0X05FP', 1, 'Seller is good', '2021-08-18 06:48:22'), 
+        ('47CMJ5', '1231', 4.7, '0X05FP', 1, 'Seller is friendly', '2021-08-18 06:48:22'), 
+        ('7JZ9LN', '1234', 2.1, 'NN2DCN', 1, 'Seller is rude', '2021-08-21 01:10:32'), 
+        ('OONGIE', '1274', 3.4, 'VNWCA6', 1, 'Seller is good', '2021-08-08 13:27:34'), 
         ('Q618G5', '1242', 3.7, 'CJZ3O5', 1, 'Delivery is on time', '2020-06-18 17:11:34'), 
-        ('PD85DO', '1265', 1.5, 'IC153D', 1, 'Seller is rude', '2020-08-06 19:11:12'), 
-        ('YSLQUC', '1242', 3.8, 'CJZ3O5', 1, 'Seller is rude', '2020-06-19 17:11:34'), 
-        ('OFOX1T', '1242', 4.6, 'CJZ3O5', 1, 'Great Product', '2020-06-19 17:11:34'), 
+        ('PD85DO', '1265', 1.5, 'IC153D', 1, 'Seller is rude', '2021-08-06 19:11:12'), 
+        ('YSLQUC', '1242', 3.8, 'CJZ3O5', 1, 'Seller is rude', '2021-08-19 17:11:34'), 
+        ('OFOX1T', '1242', 4.6, 'CJZ3O5', 1, 'Great Product', '2021-08-19 17:11:34'), 
         ('3ANGI9', '1214', 2.8, 'CDG5NA', 1, 'Delivery is slightly late', '2020-07-08 08:35:33'), 
-        ('PDU0U5', '1276', 4.3, 'U4QN6E', 1, 'Seller is friendly', '2020-06-08 21:33:23'), 
-        ('GLYLEO', '1242', 4.4, 'GPY0C9', 1, 'Seller is friendly', '2020-06-19 17:11:34');
+        ('PDU0U5', '1276', 4.3, 'U4QN6E', 1, 'Seller is friendly', '2021-08-08 21:33:23'), 
+        ('GLYLEO', '1242', 4.4, 'GPY0C9', 1, 'Seller is friendly', '2021-08-19 17:11:34');
 
         
 -- Inserting data into Complaint
