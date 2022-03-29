@@ -77,7 +77,6 @@ CREATE TABLE ProductInShop(
     Quantity INT NOT NULL,
     Rate FLOAT,
     NumofUserRated INT NOT NULL,
-    AverageRating FLOAT,
     FOREIGN KEY (ShopName) REFERENCES Shop(ShopName) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (ProductName,Maker) REFERENCES Product(ProductName,Maker) ON DELETE CASCADE ON UPDATE CASCADE
 );
