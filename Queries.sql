@@ -52,28 +52,28 @@ HAVING AVG(TIMESTAMPDIFF(HOUR,C.HandleStartTimestamp,C.CloseTimestamp)) <= ALL (
 );
 
 -- query for Question 9
--- assume now is Aug 2021
+-- assume 'at least 3 months' refers to 3 consecutive months and 'increase' means greater than
 -- Question: Find products that are increasingly being purchased over at least 3 months.
--- First, for each product calculate its total sales in August 2021 and compare that of the product in July 2021. Find those products whose sales in August 2021 is higher than that in July 2021.
--- Second, same as the first step, find those products whose sales in July 2021 is higher than that in June 2021.
--- Last, insersect the results of previous two steps and get the final results.
+-- To compare between specific month and the sales of the month, a lot of use of functions are involved and it is clearer if we use a temporary view to prepare those data.
+-- Hence, firstly, we prepare the data of month, year and totalsales for each Product.
+-- Second, for each product and a specific month, we compare the sales of the product in the month with that of the last month and filter out those whose sales are greater than that of last month.
+-- Third, similar the previous step, we find the product with the totalsales in a month that is less than that of next month.
+-- Last, use 'AND' to combine the previous two conditions to the results.
 
-SELECT DISTINCT P.ProductName, P.Maker
-FROM Product P
-WHERE (
-    SELECT SUM(R1.Quantity)
-    FROM ProductInShop S1, Orders O1, OrderItem R1
-    WHERE P.ProductName = S1.ProductName AND P.Maker = S1.Maker AND S1.IDinShoikee = R1.IDinShoikee AND O1.OrderID = R1.OrderID AND O1.OrderPlaced <= '2021-08-31' AND O1.OrderPlaced >= '2021-08-01'
-) > (
-    SELECT SUM(R2.Quantity)
-    FROM ProductInShop S2, Orders O2, OrderItem R2
-    WHERE P.ProductName = S2.ProductName AND P.Maker = S2.Maker AND S2.IDinShoikee = R2.IDinShoikee AND O2.OrderID = R2.OrderID AND O2.OrderPlaced <= '2021-07-31' AND O2.OrderPlaced >= '2021-07-01'
-) AND (
-    SELECT SUM(R3.Quantity)
-    FROM ProductInShop S3, Orders O3, OrderItem R3
-    WHERE P.ProductName = S3.ProductName AND P.Maker = S3.Maker AND S3.IDinShoikee = R3.IDinShoikee AND O3.OrderID = R3.OrderID AND O3.OrderPlaced <= '2021-07-31' AND O3.OrderPlaced >= '2021-07-01'
-) > (
-    SELECT SUM(R4.Quantity)
-    FROM ProductInShop S4, Orders O4, OrderItem R4
-    WHERE P.ProductName = S4.ProductName AND P.Maker = S4.Maker AND S4.IDinShoikee = R4.IDinShoikee AND O4.OrderID = R4.OrderID AND O4.OrderPlaced <= '2021-06-30' AND O4.OrderPlaced >= '2021-06-01'
-);
+WITH Sales AS (
+    SELECT P.ProductName, P.Maker, MONTH(O.OrderPlaced) AS Month, YEAR(O.OrderPlaced) AS Year, SUM(I.Quantity) AS TotalSales
+    FROM ProductInShop P, OrderItem I, Orders O
+    WHERE P.IDinShoikee = I.IDinShoikee AND I.OrderID = O.OrderID
+    GROUP BY P.ProductName, P.Maker, Year, Month
+) SELECT S.ProductName, S.Maker
+FROM Sales AS S
+WHERE EXISTS (
+    SELECT S1.ProductName
+    FROM Sales S1
+    WHERE S.ProductName = S1.ProductName AND S.Maker = S1.Maker AND S.Year = S1.Year AND S.Month-1 = S1.Month AND S.TotalSales > S1.TotalSales
+    ) AND EXISTS 
+    (
+    SELECT S2.ProductName
+    FROM Sales S2
+    WHERE S.ProductName = S2.ProductName AND S.Maker = S2.Maker AND S.Year = S2.Year AND S.Month+1 = S2.Month AND S.TotalSales < S2.TotalSales
+    );
