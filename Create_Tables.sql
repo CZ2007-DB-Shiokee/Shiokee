@@ -78,7 +78,7 @@ CREATE TABLE Orders(
     OrderID VARCHAR(30) PRIMARY KEY,
     UserID VARCHAR(30),
     TotalShippingCost FLOAT,
-    ShippingAddress VARCHAR(80),
+    ShippingAddress VARCHAR(150),
     OrderPlaced DATETIME,
     FOREIGN KEY (UserID) REFERENCES Users(UserID)
 );
