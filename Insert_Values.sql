@@ -48,7 +48,18 @@ VALUES ('White Eraser', 'Faber-Castell', 1.90, 'Stationery'),
 ('Shampoo', 'Dove', 16.90, 'Toiletries'),
 ('Pork belly', 'ABC Butchery', 13.90, 'Food'),
 ('Wagyu Beef', 'ABC Butchery', 25.90, 'Food'),
-('Tom yum cup noodles', 'Nissin', 2.90, 'Food'); -- Giant items
+('Tom yum cup noodles', 'Nissin', 2.90, 'Food'), -- Giant items
+('Samsung Galaxy S21', 'Samsung', 1200, 'Phone'),
+('Samsung Galaxy S22', 'Samsung', 799, 'Phone'),
+('Samsung Galaxy Z Flip3', 'Samsung', 1390, 'Electronics'),
+('Samsung Galaxy A53', 'Samsung', 678, 'Phone'),
+('Samsung Galaxy A32', 'Samsung', 428, 'Phone'),
+('Samsung Galaxy Flip3', 'Samsung', 1299, 'Phone'),
+('Samsung Galaxy Watch', 'Samsung', 700, 'Watch'),
+('Samsung Galaxy Tab A8', 'Samsung', 500, 'Tablet'),
+('Samsung Galaxy Chromebook', 'Samsung', 1200, 'Laptop'),
+('Wireless Charger', 'Samsung', 55, 'Electronics'),
+('Samsung Galaxy Buds', 'Samsung', 248, 'Headphones'); -- Samsung items
 
 -- Inserting data into Shop
 
@@ -59,7 +70,8 @@ VALUES  ('Popular', 23),
 ('Uniqlo', 488),
 ('Ikea', 700),
 ('Apple', 89),
-('Giant', 454);
+('Giant', 454),
+('Samsung', 11);
 
 -- Inserting data into ProductInShop
 
@@ -255,14 +267,15 @@ VALUES ('0001', 'ABC001'),
 ('0012', 'TUV007'),
 ('0015', 'XYZ008');
 
+
 -- Inserting data into ShopComplaint
 
 INSERT INTO ShopComplaint
 VALUES ('0002', 'Apple'),
 ('0005', 'Uniqlo'),
 ('0006', 'Sephora'),
-('0010', 'Giant'),
+('0010', 'Samsung'),
 ('0011', 'Giant'),
-('0013', 'Sephora'),
+('0013', 'Samsung'),
 ('0014', 'Ikea'),
 ('0016', 'Challenger');
