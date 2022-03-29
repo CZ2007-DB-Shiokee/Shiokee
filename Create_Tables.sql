@@ -1,23 +1,13 @@
---
--- Table structure for table `User`
---
-
-CREATE TABLE UserTable(
-    UserID VARCHAR(30) PRIMARY KEY,
-    UserName VARCHAR(30)
-);
+USE SHOIKEE;
 
 --
--- Table structure for table `OrderTable`
+-- Table structure for table `Shop`
 --
 
-CREATE TABLE OrderTable(
-    OrderID VARCHAR(30) PRIMARY KEY,
-    UserID VARCHAR(30),
-    TotalShippingCost FLOAT,
-    OrderPlaced DATETIME,
-    ShippingAddress VARCHAR(80),
-    FOREIGN KEY (UserID) REFERENCES UserTable(UserID)
+CREATE TABLE Shop(
+	ShopName VARCHAR(30),
+    NoOfProducts INT,
+    PRIMARY KEY (ShopName)
 );
 
 --
@@ -33,14 +23,32 @@ CREATE TABLE Product(
 );
 
 --
--- Table structure for table `Shop`
+-- Table structure for table `ProductInShop`
 --
 
-CREATE TABLE Shop(
-	ShopName VARCHAR(30),
-  NoOfProducts INT,
-  PRIMARY KEY (ShopName)
+CREATE TABLE ProductInShop(
+    IDinShoikee VARCHAR(30) PRIMARY KEY,
+    ShopName VARCHAR(100) NOT NULL,
+    ProductName VARCHAR(300) NOT NULL,
+    Maker VARCHAR(30),
+    IDinShop VARCHAR(30) NOT NULL,
+    Price FLOAT NOT NULL,
+    Quantity INT NOT NULL,
+    Rate FLOAT,
+    NumofUserRated INT NOT NULL,
+    FOREIGN KEY (ShopName) REFERENCES Shop(ShopName) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (ProductName,Maker) REFERENCES Product(ProductName,Maker) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+--
+-- Table structure for table `User`
+--
+
+CREATE TABLE Users(
+    UserID VARCHAR(30) PRIMARY KEY,
+    UserName VARCHAR(30)
+);
+
 
 --
 -- Table structure for table `Employee`
@@ -65,21 +73,51 @@ CREATE TABLE PriceHistory(
 );
 
 --
--- Table structure for table `ProductInShop`
+-- Table structure for table `Order`
 --
 
-CREATE TABLE ProductInShop(
-    IDinShoikee VARCHAR(30) PRIMARY KEY,
-    ShopName VARCHAR(100) NOT NULL,
-    ProductName VARCHAR(300) NOT NULL,
-    Maker VARCHAR(30),
-    IDinShop VARCHAR(30) NOT NULL,
-    Price FLOAT NOT NULL,
-    Quantity INT NOT NULL,
-    Rate FLOAT,
-    NumofUserRated INT NOT NULL,
-    FOREIGN KEY (ShopName) REFERENCES Shop(ShopName) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (ProductName,Maker) REFERENCES Product(ProductName,Maker) ON DELETE CASCADE ON UPDATE CASCADE
+CREATE TABLE Order(
+    OrderID VARCHAR(30) PRIMARY KEY,
+    UserID VARCHAR(30),
+    TotalShippingCost FLOAT,
+    ShippingAddress VARCHAR(80),
+    OrderPlaced DATETIME,
+    FOREIGN KEY (UserID) REFERENCES UserTable(UserID)
+);
+
+--
+-- Table structure for table `OrderItem`
+--
+
+CREATE TABLE OrderItem(
+    IDinShoikee VARCHAR(30),
+    OrderID VARCHAR(30),
+    IDinOrder INT, 
+    SellPrice FLOAT,
+    Quantity INT,
+    Status enum('being processed','shipped','delivered') DEFAULT 'being processed',
+    ShippedTimeStamp DATETIME,
+    Delivered DATETIME,
+    PRIMARY KEY (OrderID, IDinOrder),
+    FOREIGN KEY (OrderID) REFERENCES OrderTable(OrderID),
+    FOREIGN KEY (IDinShoikee) REFERENCES ProductInShop(IDinShoikee)
+);
+
+
+--
+-- Table structure for table `Review`
+--
+
+CREATE TABLE Review(
+    ReviewID VARCHAR(30) PRIMARY KEY,
+    Rating FLOAT,
+    UserID VARCHAR(30), 
+    OrderID VARCHAR(30), 
+    IDinOrder INT,
+    Comment VARCHAR(500), 
+    PlacedTime DATETIME,
+    FOREIGN KEY (OrderID, IDinOrder) REFERENCES OrderItem(OrderID, IDinOrder),
+    FOREIGN KEY (UserID) REFERENCES UserTable(UserID)
 );
 
 --
@@ -123,36 +161,3 @@ CREATE TABLE ShopComplaint (
   CONSTRAINT shopcomplaint_ibfk_2 FOREIGN KEY (ComplaintID) REFERENCES Complaint (ComplaintID) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
---
--- Table structure for table `OrderItem`
---
-
-CREATE TABLE OrderItem(
-    IDinShoikee VARCHAR(30),
-    Status enum('being processed','shipped','delivered') DEFAULT 'being processed',
-    SellPrice FLOAT,
-    Quantity INT,
-    ShippedTimeStamp DATETIME,
-    Delivered DATETIME, 
-    OrderID VARCHAR(30),
-    IDinOrder INT, 
-    PRIMARY KEY (OrderID, IDinOrder),
-    FOREIGN KEY (OrderID) REFERENCES OrderTable(OrderID),
-    FOREIGN KEY (IDinShoikee) REFERENCES ProductInShop(IDinShoikee)
-);
-
---
--- Table structure for table `Review`
---
-
-CREATE TABLE Review(
-    ReviewID VARCHAR(30) PRIMARY KEY,
-    Rating FLOAT,
-    PlacedTime DATETIME, 
-    Comment VARCHAR(500), 
-    UserID VARCHAR(30), 
-    OrderID VARCHAR(30), 
-    IDinOrder INT,
-    FOREIGN KEY (OrderID, IDinOrder) REFERENCES OrderItem(OrderID, IDinOrder),
-    FOREIGN KEY (UserID) REFERENCES UserTable(UserID)
-);
