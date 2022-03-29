@@ -38,8 +38,8 @@ CREATE TABLE Product(
 
 CREATE TABLE Shop(
 	ShopName VARCHAR(30),
-    NoOfProducts INT,
-    PRIMARY KEY (ShopName)
+  NoOfProducts INT,
+  PRIMARY KEY (ShopName)
 );
 
 --
@@ -47,9 +47,9 @@ CREATE TABLE Shop(
 --
 
 CREATE TABLE Employee (
-  EmployeeID varchar(30) NOT NULL,
-  Name varchar(30) NOT NULL,
-  MonthlySalary int DEFAULT NULL,
+  EmployeeID VARCHAR(30) NOT NULL,
+  Name VARCHAR(30) NOT NULL,
+  MonthlySalary INT DEFAULT NULL,
   PRIMARY KEY (EmployeeID)
 );
 
@@ -58,9 +58,10 @@ CREATE TABLE Employee (
 --
 
 CREATE TABLE PriceHistory(
-    IDinShoikee VARCHAR(30) PRIMARY KEY,
+    IDinShoikee VARCHAR(30),
     Price FLOAT NOT NULL,
-    TimeStamp DATETIME NOT NULL
+    TimeStamp DATETIME NOT NULL,
+    PRIMARY KEY (IDinShoikee,TimeStamp)
 );
 
 --
