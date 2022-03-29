@@ -80,7 +80,7 @@ VALUES  ('White Eraser', 'Faber-Castell', 1.90, 'Stationery'),
         ('12-Inch Curve Television', 'LG', 999.9,'Television'),
         ('3.5mm Audio Jack', 'Audio Technical', 59, 'Accessories'),
         ('Tempered Glass Screen Protector', 'Spigen', 66.6, 'Accessories'),
-        ('Iphone X Mobile Cover', 'Castify', 19.9, 'Accessories');
+        ('iPhone X Mobile Cover', 'Castify', 19.9, 'Accessories');
 
 -- Inserting data into ProductInShop
 
@@ -93,27 +93,27 @@ VALUES  ('ABC001','Apple','iPhone X','Apple','0001', 1100, 100, 4.4, 231),
         ('QRS006','Apple','iPad Air','Apple','0006', 1500, 120, 4.4, 100),
         ('TUV007','Apple','MacBook','Apple','0007', 1800, 130, 3.8, 113),
         ('XYZ008','Apple','iPhone XR','Apple','0008', 1299, 111, 3.9, 123), -- Apple
-        ('ARC001', 'Fly Buy', 'Iphone X', '0001', 1099, 800, 4.2, 5),
-        ('ARC002', 'Fly Buy', 'Iphone XS', '0002', 1199, 950, 3.4, 11),
+        ('ARC001', 'Fly Buy', 'iPhone X', '0001', 1099, 800, 4.2, 5),
+        ('ARC002', 'Fly Buy', 'iPhone XS', '0002', 1199, 950, 3.4, 11),
         ('APP001', 'Word Wide Wishes', 'Galaxy S11', '0001', 50, 600),
         ('APP002', 'Word Wide Wishes', 'Galaxy S12', '0002', 100, 750),
-        ('APP003', 'Word Wide Wishes', 'Iphone X Mobile Cover', '0003', 40, 30),
+        ('APP003', 'Word Wide Wishes', 'iPhone X Mobile Cover', '0003', 40, 30),
         ('APM001', 'Authentic Shoppe', '12-Inch Curve Television', '0001', 35, 396 ),
-        ('APM002', 'Authentic Shoppe', 'Iphone X', '0002', 100, 820),
+        ('APM002', 'Authentic Shoppe', 'iPhone X', '0002', 100, 820),
         ('AFR011', 'Cybershop', 'Tempered Glass Screen Protector', '0001', 50, 20),
         ('JYX666', 'Silver Creek', 'Ipad Pro', '0001', 100, 1200),
         ('JYX888', 'Silver Creek', 'Ipad Mini', '0002', 100, 600),
         ('MUY012', 'Abundance Sold Here', '3.5mm Audio Jack', '0001', 100, 10),
         ('MUY016', 'Abundance Sold Here', '12-Inch Curve Television', '0002', 100, 420),
         ('MUA112', 'Widehaven', '12-Inch Curve Television', '0001', 50, 350),
-        ('MCK010', 'Directmart', 'Iphone X Mobile Cover', '0001', 100, 25),
+        ('MCK010', 'Directmart', 'iPhone X Mobile Cover', '0001', 100, 25),
         ('MCM001', 'Choose And Track', 'Galaxy S11', '0001', 100, 650),
         ('MCM002', 'Choose And Track', '12-Inch Curve Television', '0002', 70, 450),
         ('MQM001', 'Quail Hollow', 'Tempered Glass Screen Protector', '0001', 20, 20),
         ('MQM011', 'Quail Hollow', 'Ipad Pro', '0002', 80, 1400),
-        ('MCQ050', 'Abundance Sold Here','Iphone X','0001', 300,50),
-        ('PPP001', 'Choose And Track','Iphone X', '0003', 250,100),
-        ('PDD250', 'Directmart','Iphone X', '0001', 400,10);
+        ('MCQ050', 'Abundance Sold Here','iPhone X','0001', 300,50),
+        ('PPP001', 'Choose And Track','iPhone X', '0003', 250,100),
+        ('PDD250', 'Directmart','iPhone X', '0001', 400,10);
 
 
 -- Inserting data into Users

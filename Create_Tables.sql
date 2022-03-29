@@ -28,7 +28,7 @@ CREATE TABLE ProductInShop(
     IDinShoikee VARCHAR(30) PRIMARY KEY,
     ShopName VARCHAR(100) NOT NULL,
     ProductName VARCHAR(300) NOT NULL,
-    Maker VARCHAR(30),
+    Maker VARCHAR(30) NOT NULL,
     IDinShop VARCHAR(30) NOT NULL,
     Price FLOAT NOT NULL,
     Quantity INT NOT NULL,
