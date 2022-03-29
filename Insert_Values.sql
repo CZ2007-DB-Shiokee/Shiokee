@@ -1,4 +1,3 @@
-USE SHOIKEE;
 -- Inserting data into Shop
 
 INSERT INTO Shop
@@ -296,9 +295,9 @@ VALUES  ('ABC001', 1100, '2021-01-01'),
         ('ARC002', 1333, '2021-03-31');
 
 
--- Inserting data into Order
+-- Inserting data into Orders
 
-INSERT INTO Order
+INSERT INTO Orders
 VALUES  ('7XMT90', '1001', '32 Nanyang Crescent, Singapore 637658', '2020-02-04 12:00:10'),
         ('LZR52T', '1010', 'Orchard Road,#03-48,Singapore 632759', '2020-01-23 23:39:20'),
         ('KA8YA1', '1100', 'Jurong West,#10-1234, Singapore 647292', '2019-01-18 16:27:56'),
