@@ -912,7 +912,7 @@ VALUES  ('A0M001', '1001', 4.4, '7XMT90', 1, 'Well-designed and sleek in design'
         ('F2ID09', '1238', 5.0, 'JO19G6', 1, 'The product is excellent!', '2021-08-05 20:29:48') ,
         ('0EHSZG', '1244', 5.0, '42SNUM', 1, 'The product is excellent!', '2021-08-30 13:23:19') ,
         ('8KDIJ0', '1223', 5.0, 'WZJTSS', 1, 'The product is excellent!', '2021-08-23 10:11:18') ,
-        ('GF4KQZ', '1231', 5.0, 'OZWMW1', 1, 'The product is excellent!', '2021-08-10 04:34:21') 
+        ('GF4KQZ', '1231', 5.0, 'OZWMW1', 1, 'The product is excellent!', '2021-08-10 04:34:21') ,
         ('6BEYOP', '1001', 5.0, '7XMT90', 1, 'Apple is the greatest!', '2021-08-11 05:01:46') ,
         ('OZPS9G', '1001', 5.0, '7XMT90', 1, 'Apple is the greatest!', '2021-08-25 22:43:22') ,
         ('KTZU26', '1001', 5.0, '7XMT90', 1, 'Apple is the greatest!', '2021-08-01 16:25:54') ,
