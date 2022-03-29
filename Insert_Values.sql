@@ -119,7 +119,8 @@ VALUES  ('ABC001','Apple','iPhone X','Apple','0001', 1100, 100, 4.4, 231),
 -- Inserting data into Users
 
 INSERT INTO Users
-VALUES  ('1101', 'Angela123'),
+VALUES  ('1001', 'iamzczc'),
+        ('1101', 'Angela123'),
         ('1102', '91Alpha'),
         ('1003', 'Blue_Sky'),
         ('1004', 'DanceMonkey'),
