@@ -1,3 +1,4 @@
+USE SHOIKEE;
 -- Inserting data into Shop
 
 INSERT INTO Shop
@@ -62,10 +63,10 @@ VALUES  ('White Eraser', 'Faber-Castell', 1.90, 'Stationery'),
         ('Bedsheet', 'Ikea', 30, 'Household'),
         ('Pillow', 'Ikea', 50, 'Household'),
         ('Cabinet', 'Ikea', 55.90, 'Furniture'),
-        ('iPhoneX', 'Apple', 1100, 'Phone'),
-        ('iPhone11', 'Apple', 1200, 'Phone'),
-        ('iPhone13', 'Apple', 1299, 'Phone'),
-        ('iPhone13Pro', 'Apple', 1399, 'Phone'),
+        ('iPhone X', 'Apple', 1100, 'Phone'),
+        ('iPhone 11', 'Apple', 1200, 'Phone'),
+        ('iPhone 13', 'Apple', 1299, 'Phone'),
+        ('iPhone 13 Pro', 'Apple', 1399, 'Phone'),
         ('iPad Air', 'Apple', 1500, 'Tablet'),
         ('MacBook', 'Apple', 1800, 'Laptop'),
         ('Airpods Pro', 'Apple', 539, 'Headphones'),
@@ -78,7 +79,7 @@ VALUES  ('White Eraser', 'Faber-Castell', 1.90, 'Stationery'),
         ('Galaxy S11', 'Samsung', 1533, 'Phone'),
         ('Galaxy S12', 'Samsung',1888, 'Phone'),
         ('12-Inch Curve Television', 'LG', 999.9,'Television'),
-        ('3.5mm Audio Jack', 'Audio Technical', 59,'Accessories'),
+        ('3.5mm Audio Jack', 'Audio Technical', 59'Accessories'),
         ('Tempered Glass Screen Protector', 'Spigen', 66.6, 'Accessories'),
         ('Iphone X Mobile Cover', 'Castify', 19.9, 'Accessories');
 
@@ -95,25 +96,25 @@ VALUES  ('ABC001','Apple','iPhone X','Apple','0001', 1100, 100, 4.4, 231),
         ('XYZ008','Apple','iPhone XR','Apple','0008', 1299, 111, 3.9, 123), -- Apple
         ('ARC001', 'Fly Buy', 'Iphone X', '0001', 1099, 800, 4.2, 5),
         ('ARC002', 'Fly Buy', 'Iphone XS', '0002', 1199, 950, 3.4, 11),
-        ('APP001', 'Word Wide Wishes', 'Galaxy S11', 50, 600),
-        ('APP002', 'Word Wide Wishes', 'Galaxy S12', 100, 750),
-        ('APP003', 'Word Wide Wishes', 'Iphone X Mobile Cover', 40, 30),
-        ('APM001', 'Authentic Shoppe', '12-Inch Curve Television', 35, 396 ),
-        ('APM002', 'Authentic Shoppe', 'Iphone X', 100, 820),
-        ('AFR011', 'Cybershop', 'Tempered Glass Screen Protector', 50, 20),
-        ('JYX666', 'Silver Creek', 'Ipad Pro', 100, 1200),
-        ('JYX888', 'Silver Creek', 'Ipad Mini', 100, 600),
-        ('MUY012', 'Abundance Sold Here', '3.5mm Audio Jack', 100, 10),
-        ('MUY016', 'Abundance Sold Here', '12-Inch Curve Television', 100, 420),
-        ('MUA112', 'Widehaven', '12-Inch Curve Television', 50, 350),
-        ('MCK010', 'Directmart', 'Iphone X Mobile Cover', 100, 25),
-        ('MCM001', 'Choose And Track', 'Galaxy S11', 100, 650),
-        ('MCM002', 'Choose And Track', '12-Inch Curve Television', 70, 450),
-        ('MQM001', 'Quail Hollow', 'Tempered Glass Screen Protector', 20, 20),
-        ('MQM011', 'Quail Hollow', 'Ipad Pro', 80, 1400),
-        ('MCQ050', 'Abundance Sold Here','Iphone X',300,50),
-        ('PPP001', 'Choose And Track','Iphone X',250,100),
-        ('PDD250', 'Directmart','Iphone X',400,10);
+        ('APP001', 'Word Wide Wishes', 'Galaxy S11', '0001', 50, 600),
+        ('APP002', 'Word Wide Wishes', 'Galaxy S12', '0002', 100, 750),
+        ('APP003', 'Word Wide Wishes', 'Iphone X Mobile Cover', '0003', 40, 30),
+        ('APM001', 'Authentic Shoppe', '12-Inch Curve Television', '0001', 35, 396 ),
+        ('APM002', 'Authentic Shoppe', 'Iphone X', '0002', 100, 820),
+        ('AFR011', 'Cybershop', 'Tempered Glass Screen Protector', '0001', 50, 20),
+        ('JYX666', 'Silver Creek', 'Ipad Pro', '0001', 100, 1200),
+        ('JYX888', 'Silver Creek', 'Ipad Mini', '0002', 100, 600),
+        ('MUY012', 'Abundance Sold Here', '3.5mm Audio Jack', '0001', 100, 10),
+        ('MUY016', 'Abundance Sold Here', '12-Inch Curve Television', '0002', 100, 420),
+        ('MUA112', 'Widehaven', '12-Inch Curve Television', '0001', 50, 350),
+        ('MCK010', 'Directmart', 'Iphone X Mobile Cover', '0001', 100, 25),
+        ('MCM001', 'Choose And Track', 'Galaxy S11', '0001', 100, 650),
+        ('MCM002', 'Choose And Track', '12-Inch Curve Television', '0002', 70, 450),
+        ('MQM001', 'Quail Hollow', 'Tempered Glass Screen Protector', '0001', 20, 20),
+        ('MQM011', 'Quail Hollow', 'Ipad Pro', '0002', 80, 1400),
+        ('MCQ050', 'Abundance Sold Here','Iphone X','0001', 300,50),
+        ('PPP001', 'Choose And Track','Iphone X', '0003', 250,100),
+        ('PDD250', 'Directmart','Iphone X', '0001', 400,10);
 
 
 -- Inserting data into Users
@@ -297,7 +298,7 @@ VALUES  ('ABC001', 1100, '2021-01-01'),
 
 -- Inserting data into Order
 
-INSERT INTO Orders
+INSERT INTO Order
 VALUES  ('7XMT90', '1001', '32 Nanyang Crescent, Singapore 637658', '2020-02-04 12:00:10'),
         ('LZR52T', '1010', 'Orchard Road,#03-48,Singapore 632759', '2020-01-23 23:39:20'),
         ('KA8YA1', '1100', 'Jurong West,#10-1234, Singapore 647292', '2019-01-18 16:27:56'),
@@ -385,15 +386,57 @@ VALUES  ('7XMT90', '1001', '32 Nanyang Crescent, Singapore 637658', '2020-02-04 
 -- Inserting data into OrderItem
 
 INSERT INTO OrderItem
-VALUES  ('ABC001','7XMT90', 1, 1100, 1, 'delivered', '2020-02-15  00:11:37', '2020-02-19  05:11:37',);
+VALUES  ('ABC001','7XMT90', 1, 1100, 1, 'delivered', '2020-02-15  00:11:37', '2020-02-19 05:11:37')
+        ('MUY016', 'S6874S', 1, 420, 2, 'delivered', '2020-05-22 19:19:34', '2020-05-24 16:19:34'), 
+        ('MCQ050', 'JO19G6', 1, 50, 2, 'shipped', '2020-08-23 02:54:53', NULL), 
+        ('DEF002', 'GPY0C9', 1, 1200, 3, 'shipped', '2020-06-14 17:11:34', NULL), 
+        ('APP003', '7L4HE4', 1, 30, 2, 'delivered', '2020-06-07 23:33:23', '2020-06-10 21:33:23'), 
+        ('JKL004', 'U4QN6E', 1, 1399, 5, 'being processed', NULL, NULL), 
+        ('JYX666', 'FD5I2J', 1, 1200, 1, 'being processed', NULL, NULL), 
+        ('ARC002', 'IC153D', 1, 950, 3, 'shipped', '2020-08-04 19:11:12', NULL), 
+        ('APP001', '7L4HE4', 1, 600, 3, 'delivered', '2020-06-08 21:33:23', '2020-06-09 21:33:23'), 
+        ('MCK010', 'YQL6U0', 1, 25, 2, 'delivered', '2020-08-02 19:11:12', '2020-08-04 19:11:12'), 
+        ('JYX888', '0X05FP', 1, 600, 5, 'being processed', NULL, NULL), 
+        ('ARC002', '0X05FP', 1, 950, 4, 'being processed', NULL, NULL), 
+        ('MCQ050', 'NN2DCN', 1, 50, 1, 'being processed', NULL, NULL), 
+        ('AFR011', 'VNWCA6', 1, 20, 4, 'delivered', '2020-08-03 22:27:34', '2020-08-04 13:27:34'), 
+        ('PDD250', 'CJZ3O5', 1, 10, 3, 'being processed', NULL, NULL),
+        ('QRS006', 'IC153D', 1, 1500, 2, 'being processed', NULL, NULL), 
+        ('ABC001', 'CJZ3O5', 1, 1100, 1, 'being processed', NULL, NULL), 
+        ('AFR011', 'CJZ3O5', 1, 20, 1, 'being processed', NULL, NULL), 
+        ('JYX666', 'CDG5NA', 1, 1200, 5, 'shipped', '2020-07-03 09:35:33', NULL), 
+        ('MCK010', 'U4QN6E', 1, 25, 2, 'being processed', NULL, NULL), 
+        ('MCQ050', 'GPY0C9', 1, 50, 3, 'delivered', '2020-06-14 18:11:34', '2020-06-19 17:11:34');
+
 
 --
 -- Table structure for table `Review`
 --
 
 INSERT INTO Review
-VALUES ('A0M001', '1001', 4.4, '7XMT90', 1, 'Well-designed and sleek in design', '2020-02-19 11:00:32');
+VALUES  ('A0M001', '1001', 4.4, '7XMT90', 1, 'Well-designed and sleek in design', '2020-02-19 11:00:32')
+        ('T0BQ0B', '1281', 2.9, 'S6874S', 1, 'Delivery is slightly late', '2020-05-25 16:19:34'), 
+        ('9DWZJS', '1238', 4.4, 'JO19G6', 1, 'Great Product', '2020-08-25 02:54:53'), 
+        ('APTUGT', '1242', 5.0, 'GPY0C9', 1, 'Great Product!', '2020-06-15 17:11:34'), 
+        ('LXA9AW', '1276', 2.3, '7L4HE4', 1, 'Seller is rude', '2020-06-09 21:33:23'), 
+        ('742Z1I', '1276', 4.8, 'U4QN6E', 1, 'Great Product', '2020-06-09 21:33:23'), 
+        ('NLZNJI', '1218', 2.9, 'FD5I2J', 1, 'Seller is rude', '2020-07-18 12:01:56'), 
+        ('010XWN', '1265', 2.5, 'IC153D', 1, 'Seller is rude', '2020-08-07 19:11:12'), 
+        ('6J7D7W', '1276', 3.0, '7L4HE4', 1, 'Seller is rude', '2020-06-00 21:33:23'), 
+        ('HV34F8', '1265', 3.6, 'YQL6U0', 1, 'Delivery is on time', '2020-08-07 19:11:12'),
+        ('0YUGAP', '1231', 3.5, '0X05FP', 1, 'Seller is good', '2020-02-18 06:48:22'), 
+        ('47CMJ5', '1231', 4.7, '0X05FP', 1, 'Seller is friendly', '2020-02-18 06:48:22'), 
+        ('7JZ9LN', '1234', 2.1, 'NN2DCN', 1, 'Seller is rude', '2020-08-21 01:10:32'), 
+        ('OONGIE', '1274', 3.4, 'VNWCA6', 1, 'Seller is good', '2020-08-08 13:27:34'), 
+        ('Q618G5', '1242', 3.7, 'CJZ3O5', 1, 'Delivery is on time', '2020-06-18 17:11:34'), 
+        ('PD85DO', '1265', 1.5, 'IC153D', 1, 'Seller is rude', '2020-08-06 19:11:12'), 
+        ('YSLQUC', '1242', 3.8, 'CJZ3O5', 1, 'Seller is rude', '2020-06-19 17:11:34'), 
+        ('OFOX1T', '1242', 4.6, 'CJZ3O5', 1, 'Great Product', '2020-06-19 17:11:34'), 
+        ('3ANGI9', '1214', 2.8, 'CDG5NA', 1, 'Delivery is slightly late', '2020-07-08 08:35:33'), 
+        ('PDU0U5', '1276', 4.3, 'U4QN6E', 1, 'Seller is friendly', '2020-06-08 21:33:23'), 
+        ('GLYLEO', '1242', 4.4, 'GPY0C9', 1, 'Seller is friendly', '2020-06-19 17:11:34');
 
+        
 -- Inserting data into Complaint
 
 INSERT INTO Complaint
@@ -438,3 +481,4 @@ VALUES  ('0002', 'Apple'),
         ('0013', 'Sephora'),
         ('0014', 'Ikea'),
         ('0016', 'Challenger');
+
