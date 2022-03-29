@@ -93,8 +93,8 @@ VALUES  ('ABC001','Apple','iPhone X','Apple','0001', 1100, 100, 4.4, 231),
         ('QRS006','Apple','iPad Air','Apple','0006', 1500, 120, 4.4, 100),
         ('TUV007','Apple','MacBook','Apple','0007', 1800, 130, 3.8, 113),
         ('XYZ008','Apple','iPhone XR','Apple','0008', 1299, 111, 3.9, 123), -- Apple
-        ('ARC001', 'Fly Buy', 'iPhone X', '0001', 1099, 800, 4.2, 5),
-        ('ARC002', 'Fly Buy', 'iPhone XS', '0002', 1199, 950, 3.4, 11),
+        ('ARC001', 'Fly Buy', 'iPhone X', 'Apple','0001', 1099, 800, 4.2, 5),
+        ('ARC002', 'Fly Buy', 'iPhone XS', 'Apple','0002', 1199, 950, 3.4, 11);
         ('APP001', 'Word Wide Wishes', 'Galaxy S11', '0001', 50, 600),
         ('APP002', 'Word Wide Wishes', 'Galaxy S12', '0002', 100, 750),
         ('APP003', 'Word Wide Wishes', 'iPhone X Mobile Cover', '0003', 40, 30),
