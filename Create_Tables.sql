@@ -108,8 +108,8 @@ CREATE TABLE OrderItem(
 
 CREATE TABLE Review(
     ReviewID VARCHAR(30) PRIMARY KEY,
-    Rating FLOAT,
     UserID VARCHAR(30), 
+    Rating FLOAT,
     OrderID VARCHAR(30), 
     IDinOrder INT,
     Comment VARCHAR(500), 
@@ -158,4 +158,3 @@ CREATE TABLE ShopComplaint (
   CONSTRAINT shopcomplaint_ibfk_1 FOREIGN KEY (ShopName) REFERENCES Shop (ShopName) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT shopcomplaint_ibfk_2 FOREIGN KEY (ComplaintID) REFERENCES Complaint (ComplaintID) ON DELETE CASCADE ON UPDATE CASCADE
 );
-
