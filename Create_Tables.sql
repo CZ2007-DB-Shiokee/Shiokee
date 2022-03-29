@@ -3,9 +3,9 @@
 --
 
 CREATE TABLE Shop(
-	ShopName VARCHAR(30),
-    NoOfProducts INT,
-    PRIMARY KEY (ShopName)
+	ShopName VARCHAR(100),
+	NoOfProducts INT,
+	PRIMARY KEY (ShopName)
 );
 
 --
@@ -13,7 +13,7 @@ CREATE TABLE Shop(
 --
 
 CREATE TABLE Product(
-	ProductName VARCHAR(50),
+	ProductName VARCHAR(300),
   Maker VARCHAR(30),
   PRIMARY KEY (ProductName, Maker),
   Cost FLOAT,
