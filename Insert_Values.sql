@@ -78,7 +78,7 @@ VALUES  ('White Eraser', 'Faber-Castell', 1.90, 'Stationery'),
         ('Galaxy S11', 'Samsung', 1533, 'Phone'),
         ('Galaxy S12', 'Samsung',1888, 'Phone'),
         ('12-Inch Curve Television', 'LG', 999.9,'Television'),
-        ('3.5mm Audio Jack', 'Audio Technical', 59'Accessories'),
+        ('3.5mm Audio Jack', 'Audio Technical', 59, 'Accessories'),
         ('Tempered Glass Screen Protector', 'Spigen', 66.6, 'Accessories'),
         ('Iphone X Mobile Cover', 'Castify', 19.9, 'Accessories');
 
