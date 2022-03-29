@@ -105,10 +105,10 @@ CREATE TABLE Complaint (
 
 CREATE TABLE ProductComplaint (
   ComplaintID varchar(30) NOT NULL,
-  IDInShoikee varchar(30) DEFAULT NULL,
+  IDinShoikee varchar(30) DEFAULT NULL,
   PRIMARY KEY (ComplaintID),
   CONSTRAINT productcomplaint_ibfk_1 FOREIGN KEY (ComplaintID) REFERENCES Complaint (ComplaintID) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT productcomplaint_ibfk_2 FOREIGN KEY (IDInShoikee) REFERENCES ProductInShop (IDInShoikee) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT productcomplaint_ibfk_2 FOREIGN KEY (IDinShoikee) REFERENCES ProductInShop (IDinShoikee) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 --
