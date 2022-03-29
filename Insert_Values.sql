@@ -1,5 +1,3 @@
-
-   
 -- Inserting data into Product
 
 INSERT INTO Product
@@ -9,7 +7,7 @@ VALUES ('White Eraser', 'Faber-Castell', 1.90, 'Stationery'),
 ('Red pen', 'Zebra', 2.90, 'Stationary'),
 ('Database textbook', 'Pearson', 39.00, 'Books'),
 ('Color pencils', 'Faber-Castell', 15.90, 'Stationary'), -- Popular items
-('iPhone XR', 'Apple', 1500, 'Electronics'),
+('iPhone XR', 'Apple', 1299, 'Electronics'),
 ('Headphones', 'JBL', 1000, 'Electronics'),
 ('Monitor', 'DELL', 2100, 'Electronics'),
 ('Gaming mouse', 'Razer', 159, 'Electronics'),
@@ -52,9 +50,6 @@ VALUES ('White Eraser', 'Faber-Castell', 1.90, 'Stationery'),
 ('Wagyu Beef', 'ABC Butchery', 25.90, 'Food'),
 ('Tom yum cup noodles', 'Nissin', 2.90, 'Food'); -- Giant items
 
-
-
-
 -- Inserting data into Shop
 
 INSERT INTO Shop
@@ -63,11 +58,22 @@ VALUES  ('Popular', 23),
 ('Sephora', 10000),
 ('Uniqlo', 488),
 ('Ikea', 700),
-('Uniqlo', 488),
 ('Apple', 89),
 ('Giant', 454);
 
--- Inserting data In Employee 
+-- Inserting data into ProductInShop
+
+INSERT INTO ProductInShop
+VALUES ('ABC001','Apple','iPhoneX','Apple','0001',1100,100,4.4,231),
+('DEF002','Apple','iPhone11','Apple','0002',1200,100,4.1,200),
+('GHI003','Apple','iPhone13','Apple','0003',1299,100,4.0,122), 
+('JKL004','Apple','iPhone13Pro','Apple','0004',1399,100,3.7,140),
+('MNO005','Apple','Airpods Pro','Apple','0005',539,60,4.5,166),
+('QRS006','Apple','iPad Air','Apple','0006',1500,120,4.4,100),
+('TUV007','Apple','MacBook','Apple','0007',1800,130,3.8,113),
+('XYZ008','Apple','iPhone XR','Apple','0008',1299,111,3.9,123);
+
+-- Inserting data into Employee 
 
 INSERT INTO Employee
 VALUES ('0001', 'Megan', 7000),
@@ -95,7 +101,7 @@ VALUES ('0001', 'Megan', 7000),
 ('0023', 'Montes', 5780),
 ('0024', 'Danielle', 3490);
 
--- Inserting data In Employee 
+-- Inserting data into UserTable 
 
 INSERT INTO UserTable
 VALUES ('0001', 'Angela123'),
@@ -113,12 +119,12 @@ VALUES ('0001', 'Angela123'),
 ('0013', 'PoppyFlowers'),
 ('0014', 'HaperGonzalez2121'),
 ('0015', '662Finn'),
-('0015', 'Nicolleeeeeee'),
+('0016', 'Nicolleeeeeee'),
 ('0017', 'Lorena_Rios_78'),
 ('0018', 'IdaJonesRosalind'),
 ('0019', '120Jazzzzmin');
 
--- Inserting data in Complaint
+-- Inserting data into Complaint
 
 INSERT INTO Complaint
 VALUES ('0001', NULL,
@@ -209,32 +215,33 @@ NULL),
 ('0018', '0023',
 '0003','being handled',
 '2021-09-21',
-'2021-09-22'),
+'2021-09-22',
+NULL),
 ('0019', '0019',
 '0003','being handled',
 '2021-02-11',
-'2021-02-19'),
+'2021-02-19',
+NULL),
 ('0020', '0011',
 '0003','being handled',
 '2021-06-21',
-'2021-06-22'),
-('0005', '0013',
+'2021-06-22',
+NULL),
+('0021', '0013',
 '0002','addressed',
 '2021-04-02',
 '2021-04-06',
 '2021-04-12'),
-('0005', '0015',
+('0022', '0015',
 '0002','addressed',
 '2021-07-02',
 '2021-07-04',
 '2021-07-12'),
-('0005', '0013',
+('0023', '0013',
 '0002','addressed',
 '2021-05-23',
 '2021-05-24',
 '2021-05-29');
-
-
 
 -- Inserting data into ProductComplaint
 
@@ -258,4 +265,4 @@ VALUES ('0002', 'Apple'),
 ('0011', 'Giant'),
 ('0013', 'Sephora'),
 ('0014', 'Ikea'),
-('0016', 'Chllenger');
+('0016', 'Challenger');
