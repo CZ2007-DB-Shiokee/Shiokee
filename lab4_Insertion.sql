@@ -553,12 +553,32 @@ VALUES  ('7XMT90', '1001', 1200, '32 Nanyang Crescent, Singapore 637658', '2021-
         ('ABCDEF', '1001', 128.8, 'Hall of Residence 14, NTU, Singapore', '2021-08-19 06:21:42'),
         ('ABCDEG', '1001', 1900, 'Hall of Residence 14, NTU, Singapore', '2021-08-17 06:21:42'),
         ('ABCDEH', '1001', 19, 'Hall of Residence 14, NTU, Singapore', '2021-08-11 06:21:42'),
-        ('ABCDEI', '1001', 199, 'Hall of Residence 14, NTU, Singapore', '2021-08-21 06:21:42');
+        ('ABCDEI', '1001', 199, 'Hall of Residence 14, NTU, Singapore', '2021-08-21 06:21:42'),
+        ('0BCDEF', '1007', 121, 'Hall of Residence 3, NTU, Singapore', '2021-08-20 06:21:42'),
+        ('1BCDEG', '1007', 190, 'Hall of Residence 3, NTU, Singapore', '2021-08-16 06:21:42'),
+        ('2BCDEH', '1007', 19, 'Hall of Residence 3, NTU, Singapore', '2021-08-10 06:21:42'),
+        ('3BCDEI', '1007', 199, 'Hall of Residence 3, NTU, Singapore', '2021-08-20 06:21:42');
         
 -- Inserting data into OrderItem
 
 INSERT INTO OrderItem
-VALUES  ('MCK010', 'ABCDEF', 2, 123, 1, 'being processed', NULL, NULL),
+VALUES  ('MCK010', '0BCDEF', 1, 12, 1, 'being processed', NULL, NULL),
+        ('JYX666', '0BCDEG', 2, 123.2, 1, 'being processed', NULL, NULL),
+        ('PPP001', '0BCDEG', 3, 19.9, 1, 'being processed', NULL, NULL),
+        ('JYX888', '0BCDEG', 4, 19.9, 1, 'being processed', NULL, NULL),
+        ('MCK010', '1BCDEF', 1, 12, 1, 'being processed', NULL, NULL),
+        ('JYX666', '1BCDEG', 2, 123.2, 1, 'being processed', NULL, NULL),
+        ('JYX888', '1BCDEG', 3, 19.9, 1, 'being processed', NULL, NULL),
+        ('PDD250', '1BCDEG', 4, 19.9, 1, 'being processed', NULL, NULL),
+        ('MCK010', '2BCDEF', 1, 12, 1, 'being processed', NULL, NULL),
+        ('APM001', '2BCDEG', 2, 123.2, 1, 'being processed', NULL, NULL),
+        ('PPP001', '2BCDEG', 3, 19.9, 1, 'being processed', NULL, NULL),
+        ('JYX888', '2BCDEG', 4, 19.9, 1, 'being processed', NULL, NULL),
+        ('JYX888', '3BCDEF', 1, 12, 1, 'being processed', NULL, NULL),
+        ('JYX666', '3BCDEG', 2, 123.2, 1, 'being processed', NULL, NULL),
+        ('PPP001', '3BCDEG', 3, 19.9, 1, 'being processed', NULL, NULL),
+        ('PDD250', '3BCDEG', 4, 19.9, 1, 'being processed', NULL, NULL),
+        ('MCK010', 'ABCDEF', 2, 123, 1, 'being processed', NULL, NULL),
         ('JYX666', 'ABCDEF', 1, 1234, 1, 'being processed', NULL, NULL),
         ('PPP001', 'ABCDEF', 3, 12, 1, 'being processed', NULL, NULL),
         ('APM001', 'ABCDEF', 4, 10, 1, 'being processed', NULL, NULL),
