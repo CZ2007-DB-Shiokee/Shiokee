@@ -24,9 +24,9 @@ ORDER BY SUM(OI.Quantity) DESC LIMIT 3; -- then select the popular shops
 /*Q3: Find the lowest history price of 'iPhone Xs' across all shops. List the corresponding
 shoplD, timestamp and price.*/
 SELECT P.ShopName, P.ProductName, H.TimeStamp, H.Price
-FROM PriceHistory H, ProductInShop P
-WHERE P.IDinShoikee = H.IDinShoikee AND P.ProductName = 'iPhone X'
+FROM PriceHistory H JOIN ProductInShop P ON P.IDinShoikee = H.IDinShoikee
+WHERE P.ProductName = 'iPhone X'
 AND H.Price IN (SELECT MIN(H.Price) AS LowestPrice
 FROM PriceHistory H, ProductInShop P
-WHERE H.IDinShoikee = P.IDinShoikee AND (P.ProductName = 'iPhone X' )
+WHERE H.IDinShoikee = P.IDinShoikee AND P.ProductName = 'iPhone X' 
 GROUP BY P.ProductName);
