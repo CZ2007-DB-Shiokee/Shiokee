@@ -7,18 +7,18 @@ total cost of the items they have purchased?*/
 Who are the top three shoppers in these popular shops in terms of the number of items they
 have purchased?*/
 
-
 SELECT O.UserID, PI.ShopName, SUM(OI.Quantity) AS TotalQuantity
 FROM(SELECT PI.ShopName  -- Query for finding popular shops
 FROM Orders O, OrderItem OI, ProductInShop PI
 WHERE O.OrderID = OI.OrderID AND PI.IDinShoikee = OI.IDinShoikee
-AND DATEDIFF(NOW(),O.OrderPlaced) BETWEEN 0 AND 30
+AND DATEDIFF('2021-09-01'/*NOW()*/,O.OrderPlaced) BETWEEN 0 AND 30
 GROUP BY PI.ShopName
 HAVING SUM(OI.Quantity) >= 3) AS t1,
 Orders O, OrderItem OI, ProductInShop PI
 WHERE O.OrderID = OI.OrderID AND OI.IDinShoikee = PI.IDinShoikee -- join three tables
 AND t1.ShopName = PI.ShopName
-GROUP BY O.UserID, PI.ShopName; -- then select the popular shops
+GROUP BY O.UserID, PI.ShopName
+ORDER BY SUM(OI.Quantity) DESC LIMIT 3; -- then select the popular shops
 
 
 /*Q3: Find the lowest history price of 'iPhone Xs' across all shops. List the corresponding
