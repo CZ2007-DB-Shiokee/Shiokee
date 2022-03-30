@@ -78,7 +78,24 @@ FROM
         ON o.OrderID = oi.OrderID,
       `productinshop` AS ps 
     WHERE ps.IDinShoikee = oi.IDinShoikee 
-    GROUP BY nc.UserID -- 8. Find products that have never been purchased by some users, but are the top 5 most purchased products by other users in August 2021.
+    GROUP BY nc.UserID 
+
+    -- FROM ZHANG CHI
+    -- First, for each user who has given complaints before, find all complaints and orders that he/she had and group them using UserID.
+    -- Second, from the first step, we need to find the user who has given most complaints by using 'HAVING' to compare the number of complaints between different users and find the one that is greater or eaqual to the others with '>= ALL'.
+    -- Last, with the user who gave most compaints use 'MAX()' to find the most expensive product he/she has purchased.
+    
+    SELECT C.UserID, MAX(I.SellPrice) AS MostExpensiveProductTheUserPurchased
+    FROM Complaint C, OrderItem I, Orders O
+    WHERE C.UserID = O.UserID AND O.OrderID = I.OrderID
+    GROUP BY C.UserID
+    HAVING COUNT(C.ComplaintID) >= ALL (
+        SELECT COUNT(C1.ComplaintID)
+        FROM Complaint AS C1
+        GROUP BY C1.UserID
+    );
+
+-- 8. Find products that have never been purchased by some users, but are the top 5 most purchased products by other users in August 2021.
 -- subquery1: find set of products where it hasn't appear in any purchase for some user
       SELECT 
         * 
