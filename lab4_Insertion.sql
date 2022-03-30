@@ -563,9 +563,9 @@ VALUES  ('7XMT90', '1001', 1200, '32 Nanyang Crescent, Singapore 637658', '2021-
 
 INSERT INTO OrderItem
 VALUES  ('MCK010', '0BCDEF', 1, 12, 1, 'being processed', NULL, NULL),
-        ('JYX666', '0BCDEG', 2, 123.2, 1, 'being processed', NULL, NULL),
-        ('PPP001', '0BCDEG', 3, 19.9, 1, 'being processed', NULL, NULL),
-        ('JYX888', '0BCDEG', 4, 19.9, 1, 'being processed', NULL, NULL),
+        ('JYX666', '0BCDEF', 2, 123.2, 1, 'being processed', NULL, NULL),
+        ('PPP001', '0BCDEF', 3, 19.9, 1, 'being processed', NULL, NULL),
+        ('JYX888', '0BCDEF', 4, 19.9, 1, 'being processed', NULL, NULL),
         ('MCK010', '1BCDEF', 1, 12, 1, 'being processed', NULL, NULL),
         ('JYX666', '1BCDEG', 2, 123.2, 1, 'being processed', NULL, NULL),
         ('JYX888', '1BCDEG', 3, 19.9, 1, 'being processed', NULL, NULL),
