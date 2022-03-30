@@ -552,16 +552,28 @@ VALUES  ('7XMT90', '1001', 1200, '32 Nanyang Crescent, Singapore 637658', '2021-
         ('YIK0SU', '1110', 35, '65369 Treutel Creek, Suite 508, 21932-5676, Lake Maye, Oklahoma, United States', '2021-06-11 06:45:23'),
         ('ABCDEF', '1001', 128.8, 'Hall of Residence 14, NTU, Singapore', '2021-08-19 06:21:42'),
         ('ABCDEG', '1001', 1900, 'Hall of Residence 14, NTU, Singapore', '2021-08-17 06:21:42'),
-        ('ABCDEH', '1001', 19, 'Hall of Residence 14, NTU, Singapore', '2021-08-11 06:21:42');
+        ('ABCDEH', '1001', 19, 'Hall of Residence 14, NTU, Singapore', '2021-08-11 06:21:42'),
+        ('ABCDEI', '1001', 199, 'Hall of Residence 14, NTU, Singapore', '2021-08-21 06:21:42');
         
 -- Inserting data into OrderItem
 
 INSERT INTO OrderItem
 VALUES  ('MCK010', 'ABCDEF', 2, 123, 1, 'being processed', NULL, NULL),
         ('JYX666', 'ABCDEF', 1, 1234, 1, 'being processed', NULL, NULL),
+        ('PPP001', 'ABCDEF', 3, 12, 1, 'being processed', NULL, NULL),
+        ('APM001', 'ABCDEF', 4, 10, 1, 'being processed', NULL, NULL),
+        ('MQM001', 'ABCDEF', 5, 120, 1, 'being processed', NULL, NULL),
         ('JYX666', 'ABCDEG', 1, 1900, 10, 'being processed', NULL, NULL),
         ('MCK010', 'ABCDEG', 2, 19, 1, 'being processed', NULL, NULL),
+        ('PPP001', 'ABCDEG', 3, 12, 1, 'being processed', NULL, NULL),
+        ('APM001', 'ABCDEG', 4, 10, 1, 'being processed', NULL, NULL),
+        ('MQM001', 'ABCDEG', 5, 120, 1, 'being processed', NULL, NULL),
         ('JYX666', 'ABCDEH', 1, 125, 1, 'being processed', NULL, NULL),
+        ('MCK010', 'ABCDEH', 2, 12, 1, 'being processed', NULL, NULL),
+        ('PPP001', 'ABCDEH', 3, 12, 1, 'being processed', NULL, NULL),
+        ('APM001', 'ABCDEH', 4, 10, 1, 'being processed', NULL, NULL),
+        ('MQM001', 'ABCDEH', 5, 120, 1, 'being processed', NULL, NULL),
+        ('JYX888', 'ABCDEI', 1, 188, 1, 'being processed', NULL, NULL),
         ('ABC001','7XMT90', 1, 1100, 1, 'delivered', '2021-02-15  00:11:37', '2021-02-19 05:11:37'),
         ('MUY016', 'S6874S', 1, 420, 2, 'delivered', '2021-05-22 19:19:34', '2021-05-24 16:19:34'), 
         ('MCQ050', 'JO19G6', 1, 50, 2, 'shipped', '2021-08-23 02:54:53', NULL), 
